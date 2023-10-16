@@ -196,6 +196,8 @@ class Ui_Dialog():
             self.MainWindow.mousePressPos = None
             self.MainWindow.windowPos = None
         self.sender = None
+        # Handle hiding behind the Taskbar issue
+        # self.MainWindow.pos().x()
 
     def mouseWheelEvent(self, event, source_obj):
         if callable(self.scrollWheelCallable) is False:

@@ -262,8 +262,9 @@ class WorkerThread(BaseWorkerThread):
             try:
                 self.trigger_per_format()
             except Exception as e:
+                print(str(e))
                 logging.exception(e)
-                self.refresh()
+                # self.refresh()
 
 
 def fetch_clicked_line(workerThread, line, source_obj):
